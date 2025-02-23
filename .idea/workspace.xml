@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00828a6d-3ad8-421d-afc2-5ada784a01c4" name="Changes" comment="A working version of the program created which generates dotted numbers on the outline.">
+    <list default="true" id="00828a6d-3ad8-421d-afc2-5ada784a01c4" name="Changes" comment="Simplification concept added for outline generation.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/create_outline.py" beforeDir="false" afterPath="$PROJECT_DIR$/create_outline.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dotted.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/dotted.jpeg" afterDir="false" />
@@ -86,7 +86,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740296550621</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Simplification concept added for outline generation.">
+      <option name="closed" value="true" />
+      <created>1740297703468</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1740297703469</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -94,6 +102,7 @@
     <MESSAGE value="A working outline is created." />
     <MESSAGE value="Outline generation happens with a no background image in between." />
     <MESSAGE value="A working version of the program created which generates dotted numbers on the outline." />
-    <option name="LAST_COMMIT_MESSAGE" value="A working version of the program created which generates dotted numbers on the outline." />
+    <MESSAGE value="Simplification concept added for outline generation." />
+    <option name="LAST_COMMIT_MESSAGE" value="Simplification concept added for outline generation." />
   </component>
 </project>
