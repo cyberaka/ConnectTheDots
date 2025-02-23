@@ -1,45 +1,45 @@
-# Connect-the-Dots Image Generator with Java API Wrapper
+## Connect-the-Dots Image Generator with Java API Wrapper
 
-This project provides a secure API layer for a connect-the-dots image generation system.
-The core image processing functionality is implemented in Python, while a Java-based
-wrapper (built as a Maven project) exposes REST endpoints and provides security.
-This design allows you to integrate robust Python-powered image processing into a
-secure, enterprise-ready Java backend.
+This project provides a secure API layer for a connect-the-dots image generation system. The core image processing functionality is implemented in Python, while a Java-based wrapper (built as a Maven project) exposes REST endpoints and provides security. This design allows you to integrate robust Python-powered image processing into a secure, enterprise-ready Java backend.
 
 ## Features
+
 - **Python Image Processing:**
-  - **Aggressive Background Removal:** Uses k-means clustering on a downscaled image to detect and remove the dominant background color/gradient.
-  - **Outline Extraction:** Applies edge detection and contour simplification (using approxPolyDP) to generate a simplified outline.
-  - **Dot Placement:** Automatically computes dot positions along the outline based on a specified minimum spacing and limits the total number of dots.
-  - **Output Images:**
-    - `no_background.jpeg`: Image with background removed.
-    - `outline.jpeg`: Simplified outline of the main object.
-    - `dotted.jpeg`: Outline image overlaid with dots and sequential numbers.
-    - `connect-dots.jpeg`: Blank white canvas with only dots and numbers.
+    - **Aggressive Background Removal:** Uses k-means clustering on a downscaled image to detect and remove the dominant background color/gradient.
+    - **Outline Extraction:** Applies edge detection and contour simplification (using `approxPolyDP`) to generate a simplified outline.
+    - **Dot Placement:** Automatically computes dot positions along the outline based on a specified minimum spacing and limits the total number of dots.
+    - **Output Images:**
+        - `no_background.jpeg`: Image with background removed.
+        - `outline.jpeg`: Simplified outline of the main object.
+        - `dotted.jpeg`: Outline image overlaid with dots and sequential numbers.
+        - `connect-dots.jpeg`: Blank white canvas with only dots and numbers.
+
 - **Java API Wrapper:**
-  - Exposes REST endpoints to invoke the Python image processing scripts.
-  - Provides additional security and integration into larger applications.
-  - Built using Maven for dependency management and build automation.
+    - Exposes REST endpoints to invoke the Python image processing scripts.
+    - Provides additional security and integration into larger applications.
+    - Built using Maven for dependency management and build automation.
 
 ## Repository Structure
+
 ```
-pom.xml                    - Maven build file for the Java project
+pom.xml                   - Maven build file for the Java project
 src/
   main/
-    java/                  - Java source code for REST endpoints and API wrapper
-    resources/             - Configuration files and Python scripts
-  python/
-    requirements.txt       - Python dependencies
-    connect_dots.py        - Main Python script (image processing)
-    input.jpeg             - Sample input image
-    no_background.jpeg     - Output: Image with background removed
-    outline.jpeg           - Output: Simplified outline of the main object
-    dotted.jpeg            - Output: Outline with dots and sequential numbers
-    connect-dots.jpeg      - Output: Blank canvas with only dots and numbers
-README.txt                 - This file
+    java/                 - Java source code for REST endpoints and API wrapper
+    resources/            - Configuration files and Python scripts
+python/
+  requirements.txt        - Python dependencies
+  connect_dots.py         - Main Python script (image processing)
+  input.jpeg              - Sample input image
+  no_background.jpeg      - Output: Image with background removed
+  outline.jpeg            - Output: Simplified outline of the main object
+  dotted.jpeg             - Output: Outline with dots and sequential numbers
+  connect-dots.jpeg       - Output: Blank canvas with only dots and numbers
+README.txt                - This file
 ```
 
 ## Prerequisites
+
 - **Java:** JDK 8 or higher
 - **Maven:** For building the Java wrapper
 - **Python:** Version 3.x
