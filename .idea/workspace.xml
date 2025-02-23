@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00828a6d-3ad8-421d-afc2-5ada784a01c4" name="Changes" comment="A working outline is created.">
+    <list default="true" id="00828a6d-3ad8-421d-afc2-5ada784a01c4" name="Changes" comment="Outline generation happens with a no background image in between.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/create_outline.py" beforeDir="false" afterPath="$PROJECT_DIR$/create_outline.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,12 +63,21 @@
       <option name="project" value="LOCAL" />
       <updated>1740295767658</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Outline generation happens with a no background image in between.">
+      <option name="closed" value="true" />
+      <created>1740296029878</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1740296029878</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial version of the script committed." />
     <MESSAGE value="A working outline is created." />
-    <option name="LAST_COMMIT_MESSAGE" value="A working outline is created." />
+    <MESSAGE value="Outline generation happens with a no background image in between." />
+    <option name="LAST_COMMIT_MESSAGE" value="Outline generation happens with a no background image in between." />
   </component>
 </project>
