@@ -4,17 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00828a6d-3ad8-421d-afc2-5ada784a01c4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GenerateDotToDot.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/input.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cyberaka/ConnectTheDotsApp.java" afterDir="false" />
+    <list default="true" id="00828a6d-3ad8-421d-afc2-5ada784a01c4" name="Changes" comment="Initial version of the script committed.">
+      <change afterPath="$PROJECT_DIR$/create_outline.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GenerateDotToDot.py" beforeDir="false" afterPath="$PROJECT_DIR$/GenerateDotToDot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dot_to_dot.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dot_to_dot.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/input.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +50,19 @@
       <option name="presentableId" value="Default" />
       <updated>1740290628630</updated>
     </task>
+    <task id="LOCAL-00001" summary="Initial version of the script committed.">
+      <option name="closed" value="true" />
+      <created>1740291969475</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1740291969475</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial version of the script committed." />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial version of the script committed." />
   </component>
 </project>
