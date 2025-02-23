@@ -51,10 +51,16 @@ def remove_background(input_path, output_no_background_path,
 
 def generate_outline(input_path, output_outline_path,
                      blur_kernel=(5, 5), canny_lower=50, canny_upper=150,
-                     morph_kernel_size=(5, 5), contour_thickness=2):
+                     morph_kernel_size=(5, 5), contour_thickness=2,
+                     simplify_factor=0.02):
     """
-    Generates an outline from the image at input_path (expected to be a no-background image).
-    The outline is drawn on a white canvas and saved to output_outline_path.
+    Generates a simplified outline from the image at input_path (expected to be a no-background image).
+    The outline is simplified using contour approximation and drawn on a white canvas.
+    The result is saved to output_outline_path.
+
+    Parameters:
+      - simplify_factor: A multiplier for the contour's arc length to determine the approximation precision.
+                         Increase this value to simplify the contour further.
     """
     # 1. Load the image
     img = cv2.imread(input_path)
@@ -62,36 +68,40 @@ def generate_outline(input_path, output_outline_path,
         print(f"Error: Could not load image from {input_path}")
         return
 
-    # 2. Convert to grayscale and blur to reduce noise.
+    # 2. Convert to grayscale and apply Gaussian blur
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     blurred = cv2.GaussianBlur(gray, blur_kernel, 0)
 
-    # 3. Apply Canny edge detection.
+    # 3. Apply Canny edge detection
     edges = cv2.Canny(blurred, canny_lower, canny_upper)
 
-    # 4. Morphological closing to connect broken edges.
+    # 4. Perform morphological closing to connect broken edges
     kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, morph_kernel_size)
     closed_edges = cv2.morphologyEx(edges, cv2.MORPH_CLOSE, kernel)
 
-    # 5. Find contours in the edge map.
+    # 5. Find contours in the edge map
     contours, _ = cv2.findContours(closed_edges, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
     if not contours:
         print("No contours found for outline generation!")
         return
 
-    # 6. Select the largest contour (assumed to be the main object).
+    # 6. Select the largest contour (assumed to be the main object)
     largest_contour = max(contours, key=cv2.contourArea)
 
-    # 7. Create a blank white canvas.
+    # 7. Simplify the contour using approxPolyDP
+    epsilon = simplify_factor * cv2.arcLength(largest_contour, True)
+    approx_contour = cv2.approxPolyDP(largest_contour, epsilon, True)
+
+    # 8. Create a blank white canvas
     height, width = img.shape[:2]
     outline_canvas = np.ones((height, width, 3), dtype=np.uint8) * 255
 
-    # 8. Draw the contour as the outline.
-    cv2.drawContours(outline_canvas, [largest_contour], -1, (0, 0, 0), contour_thickness)
+    # 9. Draw the simplified contour as the outline
+    cv2.drawContours(outline_canvas, [approx_contour], -1, (0, 0, 0), contour_thickness)
 
-    # 9. Save the outline image.
+    # 10. Save the outline image
     cv2.imwrite(output_outline_path, outline_canvas)
-    print(f"Outline saved to {output_outline_path}")
+    print(f"Simplified outline saved to {output_outline_path}")
 
 def generate_dotted_from_outline(input_outline_path, output_dotted_path,
                                  max_dots=50, dot_radius=4, font_scale=1.0,
@@ -139,7 +149,6 @@ def generate_dotted_from_outline(input_outline_path, output_dotted_path,
         first_point = np.array(sampled_points[0], dtype=float)
         last_point = np.array(sampled_points[-1], dtype=float)
         dist = np.linalg.norm(first_point - last_point)
-        # If the distance is less than twice the dot radius, remove the last point.
         if dist < dot_radius * 2:
             sampled_points = sampled_points[:-1]
 
@@ -171,11 +180,12 @@ if __name__ == "__main__":
     remove_background(input_file, no_background_file,
                       blur_kernel=(5, 5), threshold_value=240, morph_kernel_size=(5, 5))
 
-    # Step 2: Generate the outline from no_background.jpeg and save to outline.jpeg.
+    # Step 2: Generate the simplified outline from the no-background image and save to outline.jpeg.
     generate_outline(no_background_file, outline_file,
                      blur_kernel=(5, 5), canny_lower=50, canny_upper=150,
-                     morph_kernel_size=(5, 5), contour_thickness=2)
+                     morph_kernel_size=(5, 5), contour_thickness=2,
+                     simplify_factor=0.002)
 
     # Step 3: Generate the dotted image from outline.jpeg and save to dotted.jpeg.
     generate_dotted_from_outline(outline_file, dotted_file,
-                                 max_dots=50, dot_radius=4, font_scale=1.0, contour_thickness=2)
+                                 max_dots=30, dot_radius=4, font_scale=1.0, contour_thickness=2)
