@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00828a6d-3ad8-421d-afc2-5ada784a01c4" name="Changes" comment="Outline dots generation further optimized.">
+    <list default="true" id="00828a6d-3ad8-421d-afc2-5ada784a01c4" name="Changes" comment="Background removal is working more aggressively.">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/create_outline.py" beforeDir="false" afterPath="$PROJECT_DIR$/create_outline.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotted.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/dotted.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/input.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/no_background.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/no_background.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outline.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/outline.jpeg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +16,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;cyberaka&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/cyberaka/ConnectTheDots.git&quot;,
+    &quot;accountId&quot;: &quot;371cc2f5-9a9c-4657-950d-9dcb1a591501&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -29,17 +37,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -102,7 +110,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740298650082</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Background removal is working more aggressively.">
+      <option name="closed" value="true" />
+      <created>1740300608623</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1740300608623</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -112,6 +128,7 @@
     <MESSAGE value="A working version of the program created which generates dotted numbers on the outline." />
     <MESSAGE value="Simplification concept added for outline generation." />
     <MESSAGE value="Outline dots generation further optimized." />
-    <option name="LAST_COMMIT_MESSAGE" value="Outline dots generation further optimized." />
+    <MESSAGE value="Background removal is working more aggressively." />
+    <option name="LAST_COMMIT_MESSAGE" value="Background removal is working more aggressively." />
   </component>
 </project>
