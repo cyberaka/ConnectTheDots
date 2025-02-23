@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00828a6d-3ad8-421d-afc2-5ada784a01c4" name="Changes" comment="Addded readme.md file.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="00828a6d-3ad8-421d-afc2-5ada784a01c4" name="Changes" comment="Reformatted readme.md file.">
+      <change afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +126,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740325711694</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Reformatted readme.md file.">
+      <option name="closed" value="true" />
+      <created>1740327973589</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1740327973589</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -137,6 +146,7 @@
     <MESSAGE value="Outline dots generation further optimized." />
     <MESSAGE value="Background removal is working more aggressively." />
     <MESSAGE value="Addded readme.md file." />
-    <option name="LAST_COMMIT_MESSAGE" value="Addded readme.md file." />
+    <MESSAGE value="Reformatted readme.md file." />
+    <option name="LAST_COMMIT_MESSAGE" value="Reformatted readme.md file." />
   </component>
 </project>
